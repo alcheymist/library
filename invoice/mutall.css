@@ -1,0 +1,53 @@
+
+
+ body 
+{
+      font-family:arial,sans-serif;
+      color:#000;
+      font-size:13px;
+      color:#333;
+}
+table 
+{
+      font-size:1em;
+      margin:0 0 1em;
+      border-collapse:collapse;
+      border-width:0;
+      empty-cells:show;
+}
+td,th 
+{
+      border:1px solid #ccc;
+      padding:6px 12px;
+      vertical-align:top;
+      background-color:inherit;
+}
+th 
+{
+      background-color:#dee8f1;
+}
+
+
+header
+{
+    height:5%;
+    background-color: yellow;
+    
+}
+
+article
+{
+    height:95%;
+    overflow:scroll; 
+}
+
+/*
+tr:nth-child(even) {background: #CCC }
+tr:nth-child(odd) {background: #fff}
+*/
+
+/*
+Real number formatting*/
+.double{
+    text-align: right    
+}

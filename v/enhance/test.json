@@ -1,0 +1,131 @@
+{
+    "fuel":[
+        ["mutall_tracker", "developer", ["lawrence"], "email", "lawrence"],
+        ["mutall_tracker", "developer", ["muraya"], "email", "muraya"],
+
+        ["mutall_tracker", "todo", ["muraya"], "id", ["capture\\lookup", "test", "id"]],
+        ["mutall_tracker", "todo", ["muraya"], "description",["capture\\lookup", "test","desc"]],
+        ["mutall_tracker", "todo", ["muraya"], "start_date", ["capture\\lookup", "test", "date"]],
+
+        {
+            "class_name":"capture\\fuel",
+            "args":[
+                "test",
+                ["id", "desc", "date"],
+                
+                [
+                    ["scores", "Get Raw Scores", "2011-06-29"],
+                    ["compute", "Compute Percentages", "2011-06-29"]
+                ]    
+            ]
+        }    
+    ],
+    
+    "query":[
+        ["mutall_tracker", "developer", [], "email",
+            [   "capture\\concat",
+                [
+                    ["capture\\lookup", ["mutall_clients", "developer_name"]],
+                    "@gmail.com"
+                ]
+            ]
+        ],    
+        {
+            "class_name":"capture\\query",
+            "args":[
+                "mutall_clients",
+                "select name as developer_name from client limit 3",
+                "mutallco_rental"
+            ]
+        }
+    ],
+    "csv":[
+        ["mutall_chama", "group", [], "name", "Friends of Ngong Hills Conservancy"],
+        
+        ["mutall_chama", "event", ["eunice"], "id", "eunice_soup"],
+        ["mutall_chama", "event", ["eunice"], "name", "Eunice Kango Bone Soup Contributions"],
+        ["mutall_chama", "event", ["eunice"], "date", "2021-03-13"],
+        ["mutall_chama", "event", ["eunice"], "initiator", "Philomena"],
+        
+        ["mutall_chama", "member", ["eunice"], "email", ["capture\\lookup", "eunice", "name"]],
+        ["mutall_chama", "contribution", ["eunice"], "num", ["capture\\lookup", "eunice", "no"]],
+        ["mutall_chama", "contribution", ["eunice"], "amount", ["capture\\lookup", "eunice", "amount"]],
+ 
+        {
+            "class_name":"capture\\csv",
+            "args":[
+                "eunice",
+                "eunice_soup.csv", 
+                ["no", "name", "amount"],
+                ",",
+                -1,
+                1
+            ]
+        },
+        
+        ["mutall_chama", "event", ["mwihaki"], "id", "mwihaki_dad"],
+        ["mutall_chama", "event", ["mwihaki"], "name", "Mwihakis Data Send-off on 29-04-2021"],
+        ["mutall_chama", "event", ["mwihaki"], "date", "2021-04-29"],
+        ["mutall_chama", "event", ["mwihaki"], "initiator", "George Githui"],
+        
+        ["mutall_chama", "member", ["mwihaki"], "email", ["capture\\lookup", "mwihaki_dad", "name"]],
+        
+        ["mutall_chama", "contribution", ["mwihaki"], "num", ["capture\\lookup", "mwihaki_dad", "num"]],
+        ["mutall_chama", "contribution", ["mwihaki"], "amount", ["capture\\lookup", "mwihaki_dad", "amount"]],
+ 
+        {
+            "class_name":"capture\\csv",
+            "args":[
+                "mwihaki_dad",
+                "mwihaki_dad.csv", 
+                [],
+                ",",
+                1,
+                2
+            ]
+        },
+        
+        ["mutall_chama", "event", ["ndegwa"], "id", "ndegwa"],
+        ["mutall_chama", "event", ["ndegwa"], "name", "Bejamimn Ndegwa Farewell"],
+        ["mutall_chama", "event", ["ndegwa"], "date", "2021-05-18"],
+        ["mutall_chama", "event", ["ndegwa"], "initiator", "George Githui"],
+        
+        ["mutall_chama", "member", ["ndegwa"], "email", ["capture\\lookup", "ndegwa", "name"]],
+        
+        ["mutall_chama", "contribution", ["ndegwa"], "num", ["capture\\lookup", "ndegwa", "num"]],
+        ["mutall_chama", "contribution", ["ndegwa"], "amount", ["capture\\lookup", "ndegwa", "amount"]],
+ 
+        {
+            "class_name":"capture\\csv",
+            "args":[
+                "ndegwa",
+                "ndegwa.csv", 
+                [],
+                ",",
+                1,
+                2
+            ]
+        },
+        ["mutall_chama", "event", ["carol"], "id", "carol"],
+        ["mutall_chama", "event", ["carol"], "name", "To aid in recovery of Carol after a major surgery"],
+        ["mutall_chama", "event", ["carol"], "date", "2021-06-30"],
+        ["mutall_chama", "event", ["carol"], "initiator", "Philomena"],
+        
+        ["mutall_chama", "member", ["carol"], "email", ["capture\\lookup", "carol", "name"]],
+        
+        ["mutall_chama", "contribution", ["carol"], "num", ["capture\\lookup", "carol", "num"]],
+        ["mutall_chama", "contribution", ["carol"], "amount", ["capture\\lookup", "carol", "amount"]],
+ 
+        {
+            "class_name":"capture\\csv",
+            "args":[
+                "carol",
+                "carol.csv", 
+                [],
+                ",",
+                1,
+                2
+            ]
+        }
+    ]
+}

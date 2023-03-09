@@ -1,0 +1,24 @@
+{
+    "header":[
+        ["mutall_users","business",[],"id", 0],
+        ["mutall_users","transaction",[],"ref", 1],
+        ["mutall_users","je",[],"amount", 2],
+        ["mutall_users","account",[1],"id", 3],
+        ["mutall_users","debit",[1],"is_valid", 4],
+        ["mutall_users","credit",[2],"is_valid", 4],
+        ["mutall_users","account",[2],"id", 5],
+        ["mutall_users","je",[],"purpose", 6]
+    ],
+    "body":[
+        ["chic","3",5000, "rent",true,"chic", "rent"],
+        ["chic","3",2000, "subscription",true,"chic", "subscription"],
+        ["chic","3",10000, "investments",true,"chic", "investment"],
+        ["chic","3",3000, "water",true,"chic", "water"],
+        ["chic", "4",5000 , "chic",true, "rent", "rent"],
+        ["chic", "4", 2000, "chic", true , "subscription","subscription"],
+        ["chic", "4", 5000, "chic", true, "water","water"],
+        ["chic", "4", 5000, "chic", true, "electricity","electricity"],
+        ["chic", "4", 4000, "chic", true, "b/f", "opening balance"],
+        ["camilus","4", 10000,"t-shirts", true, "mutall", "order for t-shirts" ]
+    ]
+}

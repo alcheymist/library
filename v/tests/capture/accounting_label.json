@@ -1,0 +1,15 @@
+{
+    "header":[
+       ["mutall_users","business",[],"id", 0],
+       ["mutall_users","transaction",[],"ref", 1],
+       ["mutall_users","transaction",[],"amount", 2],
+       ["mutall_users","transaction",[],"date", 3],
+       ["mutall_users","transaction",[],"description", 4]
+    ],
+    "body":[
+        ["chic","3","20000","2021-04-31","amount recieved from chic for rent etc"],
+        ["camilus","3","10000","2021-03-12","business registration"],
+        ["chic", "4","21000", "2021-04-28","total Invoice for the month of march" ],
+        ["camilus", "5","10000","2021-04-20","Invoice for mutall for 10 t-shirts @1000"]
+    ]
+}
